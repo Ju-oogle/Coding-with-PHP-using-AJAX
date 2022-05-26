@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Simple</title>
+</head>
+
+<body>
+    <button onclick="sendRequest()">
+        Send AJAX Request: Get data
+    </button>
+    
+    <button onclick="sendRequest2()">
+        Send AJAX Request: Post data
+    </button>
+
+    <h1 id="getResponse"></h1>
+    <br><br>
+    <h1 id="sendResponse"></h1>
+
+    <script>
+    function sendRequest() {
+        var theObject = new HMLHttpRequest(); //The variable saves the object with the method that allows me send and receive data.
+        theObject.open('GET','backend.php', true);// type of petition, the URL I will request the data from, true value
+        theObject.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); //codifies the data sent to the server from the browser
+        theObject.onreadystatechange = function(){ //it gets the response from the server
+            //console.log(theObject.responseText); it shows the returned value from the server
+            document.getElementById("getResponse").innerHTML = theObject.responseText;
+        }
+        theObject.send();
+    }
+
+    function sendRequest2() {
+        var theObject = new HMLHttpRequest(); //The variable saves the object with the method that allows me send and receive data.
+        theObject.open('POST','backend.php', true);// type of petition, the URL I will request the data from, true value
+        theObject.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); //codifies the data sent to the server from the browser
+        theObject.onreadystatechange = function(){ //it gets the response from the server
+            //console.log(theObject.responseText); it shows the returned value from the server
+            document.getElementById("sendResponse").innerHTML = theObject.responseText;
+        }
+        theObject.send("username = Mambis");
+    }
+    </script>
+</body>
+
+</html>
