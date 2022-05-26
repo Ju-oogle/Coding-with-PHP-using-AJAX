@@ -6,7 +6,8 @@
 
 <p><a href="https://faztweb.com" target="_blank">Fazt Web</a> A Free and Open Project to help people to write code and learn technology.
 <ul>
-    <li><a href="https://www.youtube.com/watch?v=GeCNShiLdpc" target="_blank">Link al canal de YouTube:</a></li>
+    <a href="https://www.youtube.com/watch?v=GeCNShiLdpc" target="_blank">Link al canal de YouTube</a></li>
+    <li>Lenguajes utilizados:</a>
     <code><img alt="PHP" height="20" src="https://img.shields.io/badge/PHP-blue?&style=for-the-flat&logo=php&logoColor=white"></code>
     <code><img alt="JS" height="20" src="https://img.shields.io/badge/javascript-orange?&style=for-the-flat&logo=javascript&logoColor=white"></code>
 </ul>
